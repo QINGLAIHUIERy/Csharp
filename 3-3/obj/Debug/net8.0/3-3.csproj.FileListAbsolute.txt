@@ -1,0 +1,15 @@
+E:\Date\git\Csharp\3-3\obj\Debug\net8.0\3-3.GeneratedMSBuildEditorConfig.editorconfig
+E:\Date\git\Csharp\3-3\obj\Debug\net8.0\3-3.AssemblyInfoInputs.cache
+E:\Date\git\Csharp\3-3\obj\Debug\net8.0\3-3.AssemblyInfo.cs
+E:\Date\git\Csharp\3-3\obj\Debug\net8.0\3-3.csproj.CoreCompileInputs.cache
+E:\Date\git\Csharp\3-3\obj\Debug\net8.0\3-3.sourcelink.json
+E:\Date\git\Csharp\3-3\bin\Debug\net8.0\3-3.exe
+E:\Date\git\Csharp\3-3\bin\Debug\net8.0\3-3.deps.json
+E:\Date\git\Csharp\3-3\bin\Debug\net8.0\3-3.runtimeconfig.json
+E:\Date\git\Csharp\3-3\bin\Debug\net8.0\3-3.dll
+E:\Date\git\Csharp\3-3\bin\Debug\net8.0\3-3.pdb
+E:\Date\git\Csharp\3-3\obj\Debug\net8.0\3-3.dll
+E:\Date\git\Csharp\3-3\obj\Debug\net8.0\refint\3-3.dll
+E:\Date\git\Csharp\3-3\obj\Debug\net8.0\3-3.pdb
+E:\Date\git\Csharp\3-3\obj\Debug\net8.0\3-3.genruntimeconfig.cache
+E:\Date\git\Csharp\3-3\obj\Debug\net8.0\ref\3-3.dll
