@@ -1,0 +1,17 @@
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\Chat_Demo.exe
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\Chat_Demo.deps.json
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\Chat_Demo.runtimeconfig.json
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\Chat_Demo.dll
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\Chat_Demo.pdb
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\Chat_Demo.MainForm.resources
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\Chat_Demo.csproj.GenerateResource.cache
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\Chat_Demo.GeneratedMSBuildEditorConfig.editorconfig
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\Chat_Demo.AssemblyInfoInputs.cache
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\Chat_Demo.AssemblyInfo.cs
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\Chat_Demo.csproj.CoreCompileInputs.cache
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\Chat_Demo.sourcelink.json
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\Chat_Demo.dll
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\refint\Chat_Demo.dll
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\Chat_Demo.pdb
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\Chat_Demo.genruntimeconfig.cache
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\ref\Chat_Demo.dll

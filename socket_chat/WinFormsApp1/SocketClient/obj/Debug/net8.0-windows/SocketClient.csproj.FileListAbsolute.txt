@@ -1,0 +1,17 @@
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\bin\Debug\net8.0-windows\SocketClient.exe
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\bin\Debug\net8.0-windows\SocketClient.deps.json
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\bin\Debug\net8.0-windows\SocketClient.runtimeconfig.json
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\bin\Debug\net8.0-windows\SocketClient.dll
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\bin\Debug\net8.0-windows\SocketClient.pdb
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\obj\Debug\net8.0-windows\SocketClient.MainFrm.resources
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\obj\Debug\net8.0-windows\SocketClient.csproj.GenerateResource.cache
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\obj\Debug\net8.0-windows\SocketClient.GeneratedMSBuildEditorConfig.editorconfig
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\obj\Debug\net8.0-windows\SocketClient.AssemblyInfoInputs.cache
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\obj\Debug\net8.0-windows\SocketClient.AssemblyInfo.cs
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\obj\Debug\net8.0-windows\SocketClient.csproj.CoreCompileInputs.cache
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\obj\Debug\net8.0-windows\SocketClient.sourcelink.json
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\obj\Debug\net8.0-windows\SocketClient.dll
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\obj\Debug\net8.0-windows\refint\SocketClient.dll
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\obj\Debug\net8.0-windows\SocketClient.pdb
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\obj\Debug\net8.0-windows\SocketClient.genruntimeconfig.cache
+E:\Date\git\Csharp\socket_chat\WinFormsApp1\SocketClient\obj\Debug\net8.0-windows\ref\SocketClient.dll
