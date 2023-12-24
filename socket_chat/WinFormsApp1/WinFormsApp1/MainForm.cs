@@ -108,12 +108,85 @@ namespace Chat_Demo
                     // 结束该线程
                     return;
                 }
-                // 把接收到的数据放到文本框上
-                string str = Encoding.Default.GetString(data, 0, len);
-                AppendTextToTxtLog(string.Format("接收到客户端：{0}的消息：{1}", proxSocket.RemoteEndPoint.ToString(), str));
+
+                // 接收客户端传来的消息，根据消息类型的不同，做出不同反应
+                if (data[0] == 1)
+                {
+                    string str = ProcessReceiveString(data);
+                    AppendTextToTxtLog(string.Format("接收到客户端：{0}的消息：{1}", proxSocket.RemoteEndPoint.ToString(), str));
+                }
+                // 闪屏
+                else if (data[0] == 2)
+                {
+                    Shake();
+                }
+                else if (data[0] == 3)
+                {
+                    ProcessReceiveFile(data, len);
+                }
+            }
+        }
+
+        #region 处理接收到的字符串
+        public string ProcessReceiveString(byte[] data)
+        {
+            // 把接收到的数据放到文本框上
+            string str = Encoding.Default.GetString(data, 1, data.Length - 1);
+            return str;
+        }
+        #endregion
+
+        #region 处理接收的文件
+        public void ProcessReceiveFile(byte[] data, int len)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog())
+            {
+                sfd.DefaultExt = "txt";
+                sfd.Filter = "文本文件(*.txt)|*.txt|所有文件(*.*)|*.*";
+                // 跨线程
+                this.Invoke(new Action(() =>
+                {
+                    if (sfd.ShowDialog(this) != DialogResult.OK)
+                    {
+                        return;
+                    }
+                }));
+
+
+                // 拷贝
+                byte[] fileData = new byte[len - 1];
+                Buffer.BlockCopy(data, 1, fileData, 0, len - 1);
+
+                File.WriteAllBytes(sfd.FileName, fileData);
+            }
+        }
+        #endregion
+
+
+        public void Shake()
+        {
+            // 确保在UI线程上出发窗体抖动事件
+            this.Invoke((MethodInvoker)delegate { OnShake(); });
+        }
+
+        #region 闪屏
+        public void OnShake()
+        {
+            // 首先标记窗体的原始坐标
+            Point oldLocation = this.Location;
+            Random r = new Random();
+
+            for (int i = 0; i < 30; i++)
+            {
+                this.Location = new Point(r.Next(oldLocation.X - 5, oldLocation.X + 5),
+                r.Next(oldLocation.Y - 5, oldLocation.Y + 5));
+                Thread.Sleep(50);
+                // 移动完成之后回到原始位置
+                this.Location = oldLocation;
 
             }
         }
+        #endregion
 
         private void StopConnect(Socket proxSocket)
         {

@@ -36,6 +36,8 @@
             btnStart = new Button();
             Port = new Label();
             IP = new Label();
+            btnSendShake = new Button();
+            btnSendFile = new Button();
             SuspendLayout();
             // 
             // btnSendMsg
@@ -107,11 +109,33 @@
             IP.TabIndex = 8;
             IP.Text = "IP:";
             // 
+            // btnSendShake
+            // 
+            btnSendShake.Location = new Point(360, 464);
+            btnSendShake.Name = "btnSendShake";
+            btnSendShake.Size = new Size(94, 29);
+            btnSendShake.TabIndex = 16;
+            btnSendShake.Text = "发送闪屏";
+            btnSendShake.UseVisualStyleBackColor = true;
+            btnSendShake.Click += btnSendShake_Click;
+            // 
+            // btnSendFile
+            // 
+            btnSendFile.Location = new Point(513, 464);
+            btnSendFile.Name = "btnSendFile";
+            btnSendFile.Size = new Size(94, 29);
+            btnSendFile.TabIndex = 17;
+            btnSendFile.Text = "发送文件";
+            btnSendFile.UseVisualStyleBackColor = true;
+            btnSendFile.Click += btnSendFile_Click;
+            // 
             // MainFrm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(659, 505);
+            Controls.Add(btnSendFile);
+            Controls.Add(btnSendShake);
             Controls.Add(btnSendMsg);
             Controls.Add(txtMsg);
             Controls.Add(txtLog);
@@ -138,5 +162,7 @@
         private Button btnStart;
         private Label Port;
         private Label IP;
+        private Button btnSendShake;
+        private Button btnSendFile;
     }
 }

@@ -97,14 +97,14 @@ namespace SocketClient
                 }
                 else if (data[0] == 3)
                 {
-                    ProcessReceiveFile(data,len);
+                    ProcessReceiveFile(data, len);
                 }
             }
         }
         #endregion
 
         #region 处理接收的文件
-        public void ProcessReceiveFile(byte[] data,int len)
+        public void ProcessReceiveFile(byte[] data, int len)
         {
             using (SaveFileDialog sfd = new SaveFileDialog())
             {
@@ -118,7 +118,7 @@ namespace SocketClient
                             return;
                         }
                     }));
-                
+
 
                 // 拷贝
                 byte[] fileData = new byte[len - 1];
@@ -144,12 +144,12 @@ namespace SocketClient
 
             for (int i = 0; i < 30; i++)
             {
-                    this.Location = new Point(r.Next(oldLocation.X - 5, oldLocation.X + 5),
-                    r.Next(oldLocation.Y - 5, oldLocation.Y + 5));
-                    Thread.Sleep(50);
-                    // 移动完成之后回到原始位置
-                    this.Location = oldLocation;
-                
+                this.Location = new Point(r.Next(oldLocation.X - 5, oldLocation.X + 5),
+                r.Next(oldLocation.Y - 5, oldLocation.Y + 5));
+                Thread.Sleep(50);
+                // 移动完成之后回到原始位置
+                this.Location = oldLocation;
+
             }
         }
         #endregion
@@ -158,7 +158,7 @@ namespace SocketClient
         public string ProcessReceiveString(byte[] data)
         {
             // 把接收到的数据放到文本框上
-            string str = Encoding.Default.GetString(data, 1, data.Length-1);
+            string str = Encoding.Default.GetString(data, 1, data.Length - 1);
             return str;
         }
         #endregion
@@ -203,9 +203,15 @@ namespace SocketClient
         {
             if (ClientSocket.Connected)
             {
+                // 原始数据
                 byte[] data = Encoding.Default.GetBytes(txtMsg.Text);
+
+                byte[] result = new byte[data.Length + 1];
+                result[0] = 1;
+                // 拷贝原始数据
+                Buffer.BlockCopy(data, 0, result, 1, data.Length);
                 // 发送数据消息
-                ClientSocket.Send(data, 0, data.Length, SocketFlags.None);
+                ClientSocket.Send(result, 0, result.Length, SocketFlags.None);
             }
         }
 
@@ -219,5 +225,43 @@ namespace SocketClient
             // 判断是否连接，若连接，则关闭
             StopContnet();
         }
+
+        #region 发送闪屏
+        private void btnSendShake_Click(object sender, EventArgs e)
+        {
+            if (ClientSocket.Connected)
+            {
+                // 发送数据消息--2闪屏
+                ClientSocket.Send(new byte[] { 2 }, SocketFlags.None);
+            }
+        }
+        #endregion
+
+        #region 发送文件
+        private void btnSendFile_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                if (ofd.ShowDialog() != DialogResult.OK)
+                {
+                    return;
+                }
+                byte[] data = File.ReadAllBytes(ofd.FileName);
+                byte[] result = new byte[data.Length + 1];
+                result[0] = 3;
+                Buffer.BlockCopy(data, 0, result, 1, data.Length);
+
+
+               
+                    if (!ClientSocket.Connected)
+                    {
+                        // continue;
+                    }
+                    // 发送数据消息--3文件
+                    ClientSocket.Send(result, SocketFlags.None);
+                
+            }
+        }
+        #endregion
     }
 }
